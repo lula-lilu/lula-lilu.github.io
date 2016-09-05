@@ -91,8 +91,7 @@ Hexo的安装过程其实三行代码就可以搞定，只是环境搭建以及�
 一次只解决一个问题
 
 
-[TOC]
-#1.注册">
+1.注册Github账">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Github Pages + Hexo 快速搭建个人博客（windows）">
 <meta property="og:url" content="http://yoursite.com/2016/08/27/20160905/index.html">
@@ -104,13 +103,12 @@ Hexo的安装过程其实三行代码就可以搞定，只是环境搭建以及�
 一次只解决一个问题
 
 
-[TOC]
-#1.注册">
+1.注册Github账">
 <meta property="og:image" content="http://oczbwvoof.bkt.clouddn.com/Image%20028.png">
 <meta property="og:image" content="http://oczbwvoof.bkt.clouddn.com/Image%20029.png">
 <meta property="og:image" content="http://oczbwvoof.bkt.clouddn.com/Image%20030.png">
 <meta property="og:image" content="http://oczbwvoof.bkt.clouddn.com/Image01.png">
-<meta property="og:updated_time" content="2016-09-05T05:27:17.576Z">
+<meta property="og:updated_time" content="2016-09-05T05:31:12.145Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Github Pages + Hexo 快速搭建个人博客（windows）">
 <meta name="twitter:description" content="记录一下搭建过程，以免自己忘记具体详细步骤有很多相关博客写过，所以也就不一步一步的记录下来，只是把主要步骤加上自己走弯路的地方记录一下。
@@ -120,8 +118,7 @@ Hexo的安装过程其实三行代码就可以搞定，只是环境搭建以及�
 一次只解决一个问题
 
 
-[TOC]
-#1.注册">
+1.注册Github账">
 <meta name="twitter:image" content="http://oczbwvoof.bkt.clouddn.com/Image%20028.png">
 
 
@@ -358,19 +355,18 @@ Hexo的安装过程其实三行代码就可以搞定，只是环境搭建以及�
 <li>一次只解决一个问题</li>
 </ul>
 <hr>
-<p>[TOC]</p>
-<p>#1.注册Github账号<br>首先去官网<a href="https://github.com/" target="_blank" rel="external">GIthub</a>注册一个帐号。<br>然后建立一个username.github.io的仓库（repository）</p>
-<p>#2.安装Github for windows<br>这一步之前看到各种不同的方法，很多人是直接安装git,还有一些说要配置SSH key之类的，其实直接安装Github for windows 即可完成。只需要傻瓜式软件安装，登陆自己之前注册的用户名即可。这里注意一下下载过程可能比较慢，建议翻墙。</p>
-<p>#3.安装Hexo<br>首先安装<a href="http://nodejs.org/" target="_blank" rel="external">Node.js</a>,也是傻瓜软件安装<br>然后打开Powershell(直接在电脑里搜索即可)，输入以下代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install hexo-cli -g</div></pre></td></tr></table></figure></p>
+<h1 id="1-注册Github账号"><a href="#1-注册Github账号" class="headerlink" title="1.注册Github账号"></a>1.注册Github账号</h1><p>首先去官网<a href="https://github.com/" target="_blank" rel="external">GIthub</a>注册一个帐号。<br>然后建立一个username.github.io的仓库（repository）</p>
+<h1 id="2-安装Github-for-windows"><a href="#2-安装Github-for-windows" class="headerlink" title="2.安装Github for windows"></a>2.安装Github for windows</h1><p>这一步之前看到各种不同的方法，很多人是直接安装git,还有一些说要配置SSH key之类的，其实直接安装Github for windows 即可完成。只需要傻瓜式软件安装，登陆自己之前注册的用户名即可。这里注意一下下载过程可能比较慢，建议翻墙。</p>
+<h1 id="3-安装Hexo"><a href="#3-安装Hexo" class="headerlink" title="3.安装Hexo"></a>3.安装Hexo</h1><p>首先安装<a href="http://nodejs.org/" target="_blank" rel="external">Node.js</a>,也是傻瓜软件安装<br>然后打开Powershell(直接在电脑里搜索即可)，输入以下代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install hexo-cli -g</div></pre></td></tr></table></figure></p>
 <p>完成到这一步所有的环境就配置好了，接下来就可以看到页面了</p>
 <p>继续在PowerShell中输入：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">cd D:\Github # 这里选择想要放置博客内容的文件夹</div><div class="line">hexo init  Hexo</div></pre></td></tr></table></figure></p>
 <p>这一步可能遇到的问题就是hexo命令识别不出来<br>解决办法：把hexo的安装目录添加到环境变量中<br>接下来可以预览博客啦<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">hexo generate # 生成博客的页面相关文件</div><div class="line">hexo server</div></pre></td></tr></table></figure></p>
 <p>此时在浏览器输入<a href="http://localhost:4000/" target="_blank" rel="external"> http://localhost:4000/ </a>即可看到默认博客了，大概是下图的样子。<br><img src="http://oczbwvoof.bkt.clouddn.com/Image%20028.png" alt=""></p>
 <p>看完之后就用Ctrl+C并且输入y停止服务。这时hexo还没有和你的GitHub关联上，所以接下来就是把两个部分联系在一起。</p>
-<p>#4. 部署hexo<br>修改站点配置文件D:\Github\Hexo_config.yml<br><img src="http://oczbwvoof.bkt.clouddn.com/Image%20029.png" alt=""></p>
+<h1 id="4-部署hexo"><a href="#4-部署hexo" class="headerlink" title="4. 部署hexo"></a>4. 部署hexo</h1><p>修改站点配置文件D:\Github\Hexo_config.yml<br><img src="http://oczbwvoof.bkt.clouddn.com/Image%20029.png" alt=""></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">npm install hexo-deployer-git --save</div><div class="line">hexo clean</div><div class="line">hexo generate</div><div class="line">hexo deploy</div></pre></td></tr></table></figure>
 <p>这一步可能遇到的问题连接不上github账号之类的，可以切换到git shell里运行即可。<br>这时打开你的username.github.io即可，例如我的<a href="http://lula-lilu.github.io/" target="_blank" rel="external">http://lula-lilu.github.io/</a></p>
-<p>#5.美化博客<br>这一步自主性比较大，我就只记录自己的步骤。</p>
+<h1 id="5-美化博客"><a href="#5-美化博客" class="headerlink" title="5.美化博客"></a>5.美化博客</h1><p>这一步自主性比较大，我就只记录自己的步骤。</p>
 <p>##安装主题<br>可以在官网的<a href="https://hexo.io/themes/" target="_blank" rel="external">主题页面</a>找到喜欢的主题<br>使用最多的主题：next<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git clone https://github.com/iissnan/hexo-theme-next themes/next</div></pre></td></tr></table></figure></p>
 <p>安装完成后在站点配置文件中切换即可，然后在运行<br><img src="http://oczbwvoof.bkt.clouddn.com/Image%20030.png" alt=""></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">hexo clean</div><div class="line">hexo generate</div><div class="line">hexo deploy</div></pre></td></tr></table></figure>
@@ -439,20 +435,6 @@ Hexo的安装过程其实三行代码就可以搞定，只是环境搭建以及�
       
 
       
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-          </div>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/09/04/hello-world/" rel="prev" title="Hello World">
-                Hello World <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
-      
 
       
       
@@ -520,7 +502,7 @@ Hexo的安装过程其实三行代码就可以搞定，只是环境搭建以及�
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">2</span>
+              <span class="site-state-item-count">1</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
@@ -586,7 +568,7 @@ Hexo的安装过程其实三行代码就可以搞定，只是环境搭建以及�
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#配置主题"><span class="nav-number">1.</span> <span class="nav-text">配置主题</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-注册Github账号"><span class="nav-number">1.</span> <span class="nav-text">1.注册Github账号</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-安装Github-for-windows"><span class="nav-number">2.</span> <span class="nav-text">2.安装Github for windows</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-安装Hexo"><span class="nav-number">3.</span> <span class="nav-text">3.安装Hexo</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-部署hexo"><span class="nav-number">4.</span> <span class="nav-text">4. 部署hexo</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#5-美化博客"><span class="nav-number">5.</span> <span class="nav-text">5.美化博客</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#配置主题"><span class="nav-number">5.1.</span> <span class="nav-text">配置主题</span></a></li></ol></li></ol></div>
             
           </div>
         </section>
