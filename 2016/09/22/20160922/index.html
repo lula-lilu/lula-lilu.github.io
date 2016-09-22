@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, Lula" />
+  <meta name="keywords" content="R," />
 
 
 
@@ -84,12 +84,18 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="lula">
-<meta property="og:url" content="http://lula-lilu.github.io/index.html">
+<meta name="description" content="在微博上偶然看到的一篇推文，用了R语言ggmap的包很容易做出的可视化效果，感觉比ArcGIS要方便很多，跟着那篇博文做了一遍，也遇到一些小问题，发现R语言真的挺强大的。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="R语言地图可视化(ggmap,rvest)">
+<meta property="og:url" content="http://lula-lilu.github.io/2016/09/22/20160922/index.html">
 <meta property="og:site_name" content="lula">
+<meta property="og:description" content="在微博上偶然看到的一篇推文，用了R语言ggmap的包很容易做出的可视化效果，感觉比ArcGIS要方便很多，跟着那篇博文做了一遍，也遇到一些小问题，发现R语言真的挺强大的。">
+<meta property="og:image" content="http://oczbwvoof.bkt.clouddn.com/animation.gif">
+<meta property="og:updated_time" content="2016-09-22T09:23:48.468Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="lula">
+<meta name="twitter:title" content="R语言地图可视化(ggmap,rvest)">
+<meta name="twitter:description" content="在微博上偶然看到的一篇推文，用了R语言ggmap的包很容易做出的可视化效果，感觉比ArcGIS要方便很多，跟着那篇博文做了一遍，也遇到一些小问题，发现R语言真的挺强大的。">
+<meta name="twitter:image" content="http://oczbwvoof.bkt.clouddn.com/animation.gif">
 
 
 
@@ -110,9 +116,9 @@
 
 
 
-  <link rel="canonical" href="http://lula-lilu.github.io/"/>
+  <link rel="canonical" href="http://lula-lilu.github.io/2016/09/22/20160922/"/>
 
-  <title> lula </title>
+  <title> R语言地图可视化(ggmap,rvest) | lula </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -133,9 +139,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left 
-   page-home 
- ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -232,9 +236,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
   
@@ -254,10 +258,7 @@
             
             
               
-                
-                <a class="post-title-link" href="/2016/09/22/20160922/" itemprop="url">
-                  R语言地图可视化(ggmap,rvest)
-                </a>
+                R语言地图可视化(ggmap,rvest)
               
             
           </h1>
@@ -323,169 +324,70 @@
       
 
       
-        
-          <p>在微博上偶然看到的一篇推文，用了R语言ggmap的包很容易做出的可视化效果，感觉比ArcGIS要方便很多，跟着那篇博文做了一遍，也遇到一些小问题，发现R语言真的挺强大的。</p>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/09/22/20160922/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-        
+        <p>在微博上偶然看到的一篇推文，用了R语言ggmap的包很容易做出的可视化效果，感觉比ArcGIS要方便很多，跟着那篇博文做了一遍，也遇到一些小问题，发现R语言真的挺强大的。</p>
+<a id="more"></a>
+<hr>
+<blockquote>
+<p>参考来源<a href="http://xccds1977.blogspot.com/2012/06/ggmap.html" target="_blank" rel="external">用ggmap包进行地震数据的可视化</a></p>
+</blockquote>
+<p>最后做出的动图效果<br><img src="http://oczbwvoof.bkt.clouddn.com/animation.gif" alt="中国最近一周地震动态效果"></p>
+<h1 id="抓取地震网数据"><a href="#抓取地震网数据" class="headerlink" title="抓取地震网数据"></a>抓取地震网数据</h1><figure class="highlight r"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">library</span>(rvest) <span class="comment"># 爬虫包</span></div><div class="line"><span class="keyword">library</span>(ggmap)  <span class="comment"># 地图可视化包</span></div><div class="line"><span class="keyword">library</span>(animation)  <span class="comment"># 用于生成gif图形</span></div><div class="line">webpage &lt;-<span class="string">'http://data.earthquake.cn/datashare/globeEarthquake_csn.html'</span><span class="comment"># </span></div><div class="line">web = read_html(webpage,encoding = <span class="string">"GBK"</span>) </div><div class="line">tables = web %&gt;% html_table(header=<span class="literal">TRUE</span>,fill = <span class="literal">TRUE</span>) %&gt;%<span class="string">"[["</span>(<span class="number">6</span>) </div><div class="line"><span class="comment"># 获取地震网中的表格数据</span></div><div class="line">data = tables[,c(<span class="string">'发震日期'</span>,<span class="string">'纬度(°)'</span>,<span class="string">'经度(°)'</span>)]</div><div class="line">names(data) &lt;- c(<span class="string">'date'</span>,<span class="string">'lan'</span>,<span class="string">'lon'</span>)</div><div class="line">data$lan &lt;- as.numeric(data$lan)</div><div class="line">data$lon &lt;- as.numeric(data$lon)</div><div class="line">data$date &lt;- as.Date(data$date,  <span class="string">"%Y-%m-%d"</span>)</div><div class="line"><span class="comment"># 数据类型转换</span></div></pre></td></tr></table></figure>
+<h1 id="单张可视化及密度图"><a href="#单张可视化及密度图" class="headerlink" title="单张可视化及密度图"></a>单张可视化及密度图</h1><figure class="highlight r"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">ggmap(get_googlemap(center = <span class="string">'china'</span>, zoom=<span class="number">4</span>,maptype=<span class="string">'terrain'</span>),extent=<span class="string">'device'</span>)+</div><div class="line">+     geom_point(data=data,aes(x=lon,y=lan),colour = <span class="string">'red'</span>,alpha=<span class="number">0.7</span>)</div><div class="line">+     stat_density2d(aes(x=lon,y=lan,fill=..level..,alpha=..level..),size=<span class="number">2</span>,bins=<span class="number">4</span>,data=data,geom=<span class="string">'polygon'</span>)</div><div class="line">+     theme_nothing(legend = <span class="literal">TRUE</span>) + theme(legend.position = <span class="string">"right"</span>)</div></pre></td></tr></table></figure>
+<h1 id="生成GIF图"><a href="#生成GIF图" class="headerlink" title="生成GIF图"></a>生成GIF图</h1><p>需要安装一个生成GIF的软件 ImageMagick最好安装在默认C盘<br><figure class="highlight r"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">plotfunc &lt;- <span class="keyword">function</span>(x) &#123;</div><div class="line">  +     df &lt;- subset(data,date &lt;= x)</div><div class="line">  +     df$lan &lt;- as.numeric(df$lan)</div><div class="line">  +     df$lon &lt;- as.numeric(df$lon)</div><div class="line">  +     p &lt;- ggmap(get_googlemap(center = <span class="string">'china'</span>, zoom=<span class="number">4</span>,maptype=<span class="string">'terrain'</span>),,extent=<span class="string">'device'</span>)+</div><div class="line">    +         geom_point(data=df,aes(x=lon,y=lan),colour = <span class="string">'red'</span>,alpha=<span class="number">0.7</span>)</div><div class="line">  + &#125;</div><div class="line">time &lt;- sort(unique(data$date))</div><div class="line">saveGIF(<span class="keyword">for</span>( i <span class="keyword">in</span> time) print(plotfunc(i)))</div></pre></td></tr></table></figure></p>
+
       
     </div>
 
     <div>
       
+        
+
+      
     </div>
 
     <div>
+      
+        
+
       
     </div>
 
     <footer class="post-footer">
       
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/08/27/20160905/" itemprop="url">
-                  Github Pages + Hexo 快速搭建个人博客（windows）
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-08-27T20:55:06+08:00" content="2016-08-27">
-              2016-08-27
-            </time>
-          </span>
-
+        <div class="post-tags">
           
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/工具/" itemprop="url" rel="index">
-                    <span itemprop="name">工具</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/08/27/20160905/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/08/27/20160905/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
+            <a href="/tags/R/" rel="tag">#R</a>
           
         </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          <p>记录一下搭建过程，以免自己忘记<br>具体详细步骤有很多相关博客写过，所以也就不一步一步的记录下来，只是把主要步骤加上自己走弯路的地方记录一下。</p>
-<ul>
-<li>Hexo的安装过程其实三行代码就可以搞定，只是环境搭建以及过程中会碰到各种问题，保持耐心和细心，其实走弯路的时候也学到了新的东西。</li>
-<li>另外就是发现学习软件最好的教程其实就是官方文档+搜索工具。附上<a href="https://hexo.io/zh-cn/docs/">hexo官方教程</a>。</li>
-<li>一次只解决一个问题</li>
-</ul>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/08/27/20160905/#more" rel="contents">
-              Read more &raquo;
-            </a>
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/08/27/20160905/" rel="next" title="Github Pages + Hexo 快速搭建个人博客（windows）">
+                <i class="fa fa-chevron-left"></i> Github Pages + Hexo 快速搭建个人博客（windows）
+              </a>
+            
           </div>
-        
-      
-    </div>
 
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
       
 
       
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -493,6 +395,14 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/09/22/20160922/"
+           data-title="R语言地图可视化(ggmap,rvest)" data-url="http://lula-lilu.github.io/2016/09/22/20160922/">
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -512,8 +422,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/uploads/avatar.jpg"
@@ -583,6 +502,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#抓取地震网数据"><span class="nav-number">1.</span> <span class="nav-text">抓取地震网数据</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#单张可视化及密度图"><span class="nav-number">2.</span> <span class="nav-text">单张可视化及密度图</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#生成GIF图"><span class="nav-number">3.</span> <span class="nav-text">生成GIF图</span></a></li></ol></div>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -685,6 +615,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
 
   
 
