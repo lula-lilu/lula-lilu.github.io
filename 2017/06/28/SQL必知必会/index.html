@@ -1,0 +1,770 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="SQL," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="Sams Teach Yourself SQL in 10 Minutes - Fourth Edition语句备份，方便查阅，SQL Server版本">
+<meta property="og:type" content="article">
+<meta property="og:title" content="SQL必知必会笔记">
+<meta property="og:url" content="http://lula-lilu.github.io/2017/06/28/SQL必知必会/index.html">
+<meta property="og:site_name" content="lula">
+<meta property="og:description" content="Sams Teach Yourself SQL in 10 Minutes - Fourth Edition语句备份，方便查阅，SQL Server版本">
+<meta property="og:updated_time" content="2017-06-29T08:05:18.168Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="SQL必知必会笔记">
+<meta name="twitter:description" content="Sams Teach Yourself SQL in 10 Minutes - Fourth Edition语句备份，方便查阅，SQL Server版本">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: undefined,
+      author: 'Author'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://lula-lilu.github.io/2017/06/28/SQL必知必会/"/>
+
+  <title> SQL必知必会笔记 | lula </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">lula</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            About
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                SQL必知必会笔记
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2017-06-28T22:12:00+08:00" content="2017-06-28">
+              2017-06-28
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/数据分析/" itemprop="url" rel="index">
+                    <span itemprop="name">数据分析</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <blockquote>
+<p>Sams Teach Yourself SQL in 10 Minutes - Fourth Edition<br>语句备份，方便查阅，SQL Server版本</p>
+</blockquote>
+<a id="more"></a>
+<p>[TOC]</p>
+<h1 id="检索数据"><a href="#检索数据" class="headerlink" title="检索数据"></a>检索数据</h1><blockquote>
+<p>SELECT语句</p>
+</blockquote>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">检索单个列</div><div class="line"><span class="keyword">SELECT</span> column_name <span class="keyword">FROM</span> tablename;</div><div class="line"></div><div class="line">检索多个列</div><div class="line"><span class="keyword">SELECT</span> col_name1, col_name2 <span class="keyword">FROM</span> tablename;</div><div class="line"></div><div class="line">检索所有列</div><div class="line"><span class="keyword">SELECT</span> * <span class="keyword">from</span> tablename;</div><div class="line"></div><div class="line">检索不同的值, 使用 DISTINCT关键词</div><div class="line"><span class="keyword">SELECT</span> <span class="keyword">DISTINCT</span> col_name1 <span class="keyword">FROM</span> tablename;</div><div class="line">注意：DISTINCT关键字用于所有的列，不仅仅是跟在其后的那一列。</div><div class="line"></div><div class="line">返回前五行结果</div><div class="line"><span class="keyword">SELECT</span> top <span class="number">5</span> prod_name</div><div class="line"><span class="keyword">FROM</span> Products</div><div class="line"></div><div class="line">使用注释</div><div class="line"><span class="comment">----注释的方法---</span></div><div class="line">  <span class="comment">/* 这是注释</span></div><div class="line">  的方法2 */</div></pre></td></tr></table></figure>
+<h1 id="排序数据"><a href="#排序数据" class="headerlink" title="排序数据"></a>排序数据</h1><blockquote>
+<p>ORDER BY 语句<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="comment">--注意：在指定一条ORDER BY子句时，应该保证它是SELECT语句中最后一条子句--</span></div><div class="line"><span class="keyword">SELECT</span> col_name </div><div class="line"><span class="keyword">FROM</span> tablename </div><div class="line"><span class="keyword">ORDER</span> <span class="keyword">BY</span> col_name</div><div class="line"></div><div class="line"><span class="comment">--多列排序--</span></div><div class="line"><span class="keyword">SELECT</span> col_name1, col_name2, col_name3 </div><div class="line"><span class="keyword">FROM</span> tablename <span class="keyword">ORDER</span> </div><div class="line"><span class="keyword">BY</span> col_name1, col_name2;</div><div class="line"></div><div class="line"><span class="comment">--降序排列--</span></div><div class="line"><span class="keyword">SELECT</span> col_name1, col_name2, col_name3 </div><div class="line"><span class="keyword">FROM</span> tablename </div><div class="line"><span class="keyword">ORDER</span> <span class="keyword">BY</span> col_name1 <span class="keyword">DESC</span>, col_name2;</div></pre></td></tr></table></figure></p>
+</blockquote>
+<h1 id="过滤语句"><a href="#过滤语句" class="headerlink" title="过滤语句"></a>过滤语句</h1><blockquote>
+<p>WHERE 语句</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line">SELECT col_name1, col_name2 FROM tablename WHERE col_name1 = 3.49;</div><div class="line">SELECT col_name, col_name2 FROM tablename WHERE co_name2 BETWEEN 5 AND 10;</div><div class="line">SELECT col_name FROM tablename WHERE col_name IS NULL;</div><div class="line"></div><div class="line">--AND语句---</div><div class="line">SELECT col_name1, col_name2, col_name3 </div><div class="line">FROM tablename </div><div class="line">WHERE col_name1=&apos;ABC&apos; AND col_name2 &lt;= 4</div><div class="line"></div><div class="line">--OR语句---</div><div class="line">SELECT col_name1, col_name2, col_name3 </div><div class="line">FROM tablename </div><div class="line">WHERE col_name1=&apos;ABC&apos; OR col_name2 &lt;= 4</div><div class="line"></div><div class="line">--注意：SQL在处理OR操作符前，优先处理AND操作符。使用圆括号即可解决此问题。</div><div class="line">SELECT prod_name, prod_price</div><div class="line">FROM Products</div><div class="line">WHERE (vend_id = &apos;DLL01&apos; OR vend_id = ‘BRS01’) AND  prod_price &gt;= 10;</div><div class="line"></div><div class="line">--IN语句，与OR语句相当，但是速度更快，而且可以嵌套SELECT语句</div><div class="line">SELECT prod_name, prod_price </div><div class="line">FROM Products </div><div class="line">WHERE vend_in IN (&apos;DLL01&apos;, &apos;BSLKJL&apos;) </div><div class="line">ORDER BY prod_name;</div><div class="line"></div><div class="line">--NOT语句，与&lt;&gt;类似，但是可以与IN配合使用完成更为复杂的筛选--</div><div class="line">SELECT prod_name </div><div class="line">FROM Products </div><div class="line">WHERE NOT vend_id=&apos;DLL01&apos; </div><div class="line">ORDER BY prod_name;</div></pre></td></tr></table></figure>
+<h1 id="模糊过滤"><a href="#模糊过滤" class="headerlink" title="模糊过滤"></a>模糊过滤</h1><blockquote>
+<p>LIKE </p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line">---%表示任何字符出现任意次数,%还能匹配0个字符,注意：%不能匹配NULL;需要注意前后的空格---</div><div class="line">SELECT prod_id, pro_name FROM Products WHERE prod_name LIKE &apos;Fish%&apos;;</div><div class="line">SELECT prod_id, prod_name FROM Products WHERE prod_name LIKE &apos;%bean bag%&apos;;+</div><div class="line">SELECT prod_id, prod_name FROM Products WHERE prod_name LIKE &apos;F%y&apos;;</div><div class="line"></div><div class="line">--下划线匹配单个字符--------------</div><div class="line">SELECT prodid, prodname </div><div class="line">FROM Products</div><div class="line">WHERE prod_name LIKE &apos;__inch teddy bear&apos;;</div><div class="line"></div><div class="line">--方括号[]匹配一个字符的可能选项，只有Access和SQL Server中才可以用--</div><div class="line">--例如匹配J或M开头的任意cust_contact--</div><div class="line">SELECT cust_contact</div><div class="line">FROM Customers</div><div class="line">WHERE cust_contact LIKE &apos;[JM]%&apos; </div><div class="line">ORDER BY cust_contact</div><div class="line"></div><div class="line">--方括号通配符可以使用^来否定--</div><div class="line">SELECT cust_contact</div><div class="line">FROM Customers</div><div class="line">WHERE cust_contact LIKE &apos;[^JM]%&apos; </div><div class="line">ORDER BY cust_contact</div><div class="line"></div><div class="line">--上面的例子可以直接用NOT来重写--</div><div class="line">SELECT cust_contact</div><div class="line">FROM Customers</div><div class="line">WHERE NOT cust_contact LIKE &apos;[JM]%&apos; </div><div class="line">ORDER BY cust_contact</div></pre></td></tr></table></figure>
+<ul>
+<li>不要过度使用通配符。如果其他操作符能达到相同的目的，应该使用其他操作符。</li>
+<li>在确实需要使用通配符时，也尽量不要把它们用在搜索模式的开始处。把通配符置于开始处，搜索起来是最慢的。</li>
+<li>仔细注意通配符的位置。如果放错地方，可能不会返回想要的数据。</li>
+</ul>
+<h1 id="字段计算"><a href="#字段计算" class="headerlink" title="字段计算"></a>字段计算</h1><blockquote>
+<p>+号连接字段<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">--拼接字段--</div><div class="line">--Access和SQL  Server使用+号。DB2、Oracle、PostgreSQL、SQLite和Open Office Base使用||。详细请参阅具体的DBMS文档。</div><div class="line">--大多数DBMS都支持RT RIM()（正如刚才所见，它去掉字符串右边的空格）、LT RIM()（去掉字符串左边的空格）以及T RIM()（去掉字符串</div><div class="line">左右两边的空格）。</div><div class="line">SELECT RTRIM(vend_name)+&apos;(&apos;+RTRIM(vend_country)+&apos;)&apos; AS  vend_title</div><div class="line">FROM Vendors</div><div class="line">ORDER BY vend_name</div><div class="line"></div><div class="line">--字段之间加减乘除--</div><div class="line">SELECT prod_id, quantity, item_price, quantity*item_price AS expended_price </div><div class="line">FROM OrderItems </div><div class="line">WHERE order_num=20008;</div></pre></td></tr></table></figure></p>
+</blockquote>
+<h1 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h1><blockquote>
+<p>文本函数<br>| 函数        | 说 明            |<br>| ——— | ————– |<br>| LEFT()    | 返回字符串左边的字符     |<br>| LENGTH()  | 返回字符串的长度       |<br>| LOWER()   | 将字符串转为小写       |<br>| UPPER()   | 将字符串转为大写       |<br>| LTRIM()   | 去掉字符串左边的空格     |<br>| RIGHT()   | 返回字符串右边的字符     |<br>| RTRIM()   | 去掉字符串右边的空格     |<br>| SOUNDEX() | 返回字符串的SOUNDEX值 |</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">--找出发音类似的--</div><div class="line">SELECT cust_name,cust_contact</div><div class="line">FROM Customers</div><div class="line">where SOUNDEX(cust_contact)=SOUNDEX(&apos;Michael Green&apos;)</div></pre></td></tr></table></figure>
+<blockquote>
+<p>时间函数<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">SELECT order_num</div><div class="line">FROM Orders</div><div class="line">WHERE DATEPART(yy,order_date) = 2012</div></pre></td></tr></table></figure></p>
+<p>数值处理函数</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>函数</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ABS()</td>
+<td>返回绝对值</td>
+</tr>
+<tr>
+<td>EXP()</td>
+<td>返回指数值</td>
+</tr>
+<tr>
+<td>PI()</td>
+<td>返回圆周率</td>
+</tr>
+<tr>
+<td>SQRT()</td>
+<td>返回平方根</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>聚集函数【AVG() COUNT()  MAX() MIN() SUM()】</p>
+</blockquote>
+<ul>
+<li>使用COUNT (*)对表中行的数目进行计数，不管表列中包含的是空值（NULL）还是非空值。</li>
+<li>使用COUNT (column)对特定列中具有值的行进行计数，忽略NULL值。</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">--求平均的时候要求不重复</div><div class="line">SELECT AVG(DISTINCT prod_price) AS avg_price</div><div class="line">FROM Products</div><div class="line">WHERE vend_id = &apos;DLL01&apos;;</div></pre></td></tr></table></figure>
+<h1 id="分组数据"><a href="#分组数据" class="headerlink" title="分组数据"></a>分组数据</h1><blockquote>
+<p>GROUP BY子句和HAVING子句</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">SELECT vend_id,COUNT(*) AS num_prods</div><div class="line">FROM Products</div><div class="line">GROUP BY vend_id</div><div class="line"></div><div class="line">--结果---</div><div class="line">vend_id	num_prods</div><div class="line">BRS01     	3</div><div class="line">DLL01     	4</div><div class="line">FNG01     	2</div></pre></td></tr></table></figure>
+<ul>
+<li>WHERE只能过滤行，而不是分组，分组过滤需要HAVING</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">SELECT vend_id,COUNT(*) AS num_prods</div><div class="line">FROM Products</div><div class="line">GROUP BY vend_id</div><div class="line">HAVING COUNT(*)&gt;2</div></pre></td></tr></table></figure>
+<h1 id="嵌套查询"><a href="#嵌套查询" class="headerlink" title="嵌套查询"></a>嵌套查询</h1><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="comment">---------------------------------------</span></div><div class="line"><span class="keyword">SELECT</span> cust_name,cust_contact</div><div class="line"><span class="keyword">FROM</span> Customers</div><div class="line"><span class="keyword">WHERE</span> cust_id <span class="keyword">IN</span> (<span class="keyword">SELECT</span> cust_id</div><div class="line">				  <span class="keyword">FROM</span> Orders</div><div class="line">				  <span class="keyword">WHERE</span> order_num <span class="keyword">IN</span> (<span class="keyword">SELECT</span> order_num </div><div class="line">									  <span class="keyword">FROM</span> OrderItems</div><div class="line">									  <span class="keyword">WHERE</span> prod_id = <span class="string">'RGAN01'</span>));</div><div class="line"><span class="comment">------------------------------------</span></div><div class="line"><span class="keyword">SELECT</span> cust_name, cust_contact</div><div class="line"><span class="keyword">FROM</span> Customers, Orders, OrderItems</div><div class="line"><span class="keyword">WHERE</span> Customers.cust _id = Orders.cust _id</div><div class="line"><span class="keyword">AND</span>  OrderItems.order_num = Orders.order_num</div><div class="line"><span class="keyword">AND</span>  prod_id = <span class="string">'RGAN01'</span>;</div><div class="line"><span class="comment">------------------------------------</span></div><div class="line"><span class="keyword">SELECT</span> cust_name,</div><div class="line">       cust_state,</div><div class="line">       (<span class="keyword">SELECT</span> <span class="keyword">COUNT</span>(*)</div><div class="line">        <span class="keyword">FROM</span> Orders</div><div class="line">        <span class="keyword">WHERE</span> Orders.cust_id = Customers.cust_id) <span class="keyword">AS</span> orders</div><div class="line"><span class="keyword">FROM</span> Customers		</div><div class="line"><span class="keyword">ORDER</span> <span class="keyword">BY</span> cust_name</div></pre></td></tr></table></figure>
+<h1 id="连接表"><a href="#连接表" class="headerlink" title="连接表"></a>连接表</h1><blockquote>
+<p>join</p>
+</blockquote>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line"><span class="comment">------等值连接-----------</span></div><div class="line"><span class="keyword">SELECT</span> vend_name,prod_name,prod_price</div><div class="line"><span class="keyword">FROM</span> Vendors,Products  </div><div class="line"><span class="keyword">WHERE</span> Vendors.vend_id = Products.vend_id</div><div class="line"></div><div class="line"></div><div class="line"><span class="comment">------内连接-------------</span></div><div class="line"><span class="keyword">SELECT</span> vend_name,prod_name,prod_price</div><div class="line"><span class="keyword">FROM</span> Vendors <span class="keyword">INNER</span> <span class="keyword">JOIN</span> Products</div><div class="line"><span class="keyword">ON</span> Vendors.vend_id = Products.vend_id</div><div class="line"><span class="comment">------外连接---------------</span></div><div class="line">-<span class="keyword">INNER</span> <span class="keyword">JOIN</span> 产生的结果是AB的交集</div><div class="line">-<span class="keyword">LEFT</span> [<span class="keyword">OUTER</span>] <span class="keyword">JOIN</span> 产生表A的完全集，而B表中匹配的则有值，没有匹配的则以<span class="literal">null</span>值取代。</div><div class="line">-<span class="keyword">RIGHT</span> [<span class="keyword">OUTER</span>] <span class="keyword">JOIN</span> 产生表B的完全集，而A表中匹配的则有值，没有匹配的则以<span class="literal">null</span>值取代。</div><div class="line">-<span class="keyword">FULL</span> [<span class="keyword">OUTER</span>] <span class="keyword">JOIN</span> 产生A和B的并集。对于没有匹配的记录，则会以<span class="literal">null</span>做为值。</div><div class="line"></div><div class="line"><span class="keyword">SELECT</span> vend_name,prod_name,prod_price</div><div class="line"><span class="keyword">FROM</span> Vendors <span class="keyword">LEFT</span> <span class="keyword">OUTER</span> <span class="keyword">JOIN</span> Products</div><div class="line"><span class="keyword">ON</span> Vendors.vend_id = Products.vend_id</div><div class="line"></div><div class="line"><span class="keyword">SELECT</span> vend_name,prod_name,prod_price</div><div class="line"><span class="keyword">FROM</span> Vendors <span class="keyword">RIGHT</span> <span class="keyword">OUTER</span> <span class="keyword">JOIN</span> Products</div><div class="line"><span class="keyword">ON</span> Vendors.vend_id = Products.vend_id</div><div class="line"><span class="comment">-------表别名-------------</span></div><div class="line"><span class="keyword">SELECT</span> cust_name,cust_contact</div><div class="line"><span class="keyword">FROM</span> Customers <span class="keyword">AS</span> C ,Orders <span class="keyword">AS</span> O,OrderItems <span class="keyword">AS</span> OI</div><div class="line"><span class="keyword">WHERE</span>  C.cust_id = O.cust_id <span class="keyword">AND</span> OI.order_num = O.order_num <span class="keyword">AND</span> prod_id = <span class="string">'RGAN01'</span>;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">--这个例子使用左外部联结来包含所有顾客，甚至包含那些没有任何订单的顾客。</div><div class="line">SELECT Customers.cust_id,</div><div class="line">COUNT(Orders.order_num) AS  num_ord</div><div class="line">FROM Cust omers LEFT OUTER JOIN  Orders</div><div class="line">ON  Customers.cust _id = Orders.cust _id</div><div class="line">GROUP BY Customers.cust _id;</div></pre></td></tr></table></figure>
+<h1 id="组合查询"><a href="#组合查询" class="headerlink" title="组合查询"></a>组合查询</h1><blockquote>
+<p>UNION函数<br>直接在两条SELECT语句之间，将结果合并在一起，类似在WHERE中使用OR函数，UNION会默认去除重复数据，UNION ALL不去除重复数据。ORDER BY函数必须放在最后一个SELECT语句中，并作用于最后的合并结果</p>
+<h1 id="插入数据"><a href="#插入数据" class="headerlink" title="插入数据"></a>插入数据</h1><p>INSERT INTO 按照列名来可以重复使用，可以只插入部分数据，</p>
+</blockquote>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="comment">------插入一行数据------------</span></div><div class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> Customers(cust_id, </div><div class="line">cust_name, </div><div class="line">cust_city,</div><div class="line">cust_state, </div><div class="line">cust_zip, </div><div class="line">cust_country, </div><div class="line">cust_contact, </div><div class="line">cust_email)</div><div class="line"><span class="keyword">VALUES</span>(<span class="string">'1000000001'</span>, </div><div class="line"><span class="string">'Village Toys'</span>,</div><div class="line"> <span class="string">'200 Maple Lane'</span>, </div><div class="line"> <span class="string">'Detroit'</span>,</div><div class="line"> <span class="string">'MI'</span>, </div><div class="line"> <span class="string">'USA'</span>,</div><div class="line"> <span class="string">'John Smith'</span>,</div><div class="line"> <span class="string">'sales@villagetoys.com'</span>);</div></pre></td></tr></table></figure>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="comment">-----插入SELECT结果，只关注顺序，不关注筛选出的字段名-------</span></div><div class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> Customers(cust_id,</div><div class="line">                      cust_contact ,</div><div class="line">                      cust_email,</div><div class="line">                      cust_name,</div><div class="line">                      cust_address,</div><div class="line">                      cust_city ,</div><div class="line">                      cust_state,</div><div class="line">                      cust_zip,</div><div class="line">                      cust_country )</div><div class="line"><span class="keyword">SELECT</span> cust_id,</div><div class="line">       cust_contact ,</div><div class="line">       cust_email,</div><div class="line">       cust_name,</div><div class="line">       cust_address,</div><div class="line">       cust_city ,</div><div class="line">       cust_state,</div><div class="line">       cust_zip,</div><div class="line">       cust_country</div><div class="line"><span class="keyword">FROM</span> CustNew;</div></pre></td></tr></table></figure>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">-----从一个表复制到另一个表-------</span></div><div class="line"><span class="keyword">SELECT</span> *</div><div class="line"><span class="keyword">INTO</span> CustCopy</div><div class="line"><span class="keyword">FROM</span> Customers</div></pre></td></tr></table></figure>
+<h1 id="更新删除数据"><a href="#更新删除数据" class="headerlink" title="更新删除数据"></a>更新删除数据</h1><blockquote>
+<p>UPDATE  DELETE</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">----更新指定行-------------</div><div class="line">UPDATE Customers</div><div class="line">SET cust_contact  = &apos;Sam Roberts&apos;,</div><div class="line">    cust_email = &apos;sam@toyland.com&apos;</div><div class="line">WHERE cust_id = &apos;1000000006&apos;;</div><div class="line">------删除指定行--------</div><div class="line">DELETE FROM Cust omers</div><div class="line">WHERE cust_id = &apos;1000000006&apos;;</div><div class="line">--DELETE只能删除行，删除列则用update</div><div class="line">--删除表中的所有数据TRUNCATE TABLE速度更快</div></pre></td></tr></table></figure>
+<h1 id="创建和操纵类"><a href="#创建和操纵类" class="headerlink" title="创建和操纵类"></a>创建和操纵类</h1><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="comment">----创建表-------------</span></div><div class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> Products</div><div class="line">(</div><div class="line">  prod_id    <span class="built_in">char</span>(<span class="number">10</span>)      <span class="keyword">NOT</span> <span class="literal">NULL</span> ,</div><div class="line">  vend_id    <span class="built_in">char</span>(<span class="number">10</span>)      <span class="keyword">NOT</span> <span class="literal">NULL</span> ,</div><div class="line">  prod_name  <span class="built_in">char</span>(<span class="number">255</span>)     <span class="keyword">NOT</span> <span class="literal">NULL</span> ,</div><div class="line">  prod_price <span class="built_in">decimal</span>(<span class="number">8</span>,<span class="number">2</span>)  <span class="keyword">DEFAULT</span> <span class="number">1</span>,</div><div class="line">  prod_desc  <span class="built_in">varchar</span>(<span class="number">1000</span>) <span class="literal">NULL</span> </div><div class="line">);</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">------更新表---------</div><div class="line">ALTER  TABLE Vendos</div><div class="line">ADD vend_phone CHAR(20);</div><div class="line">ALTER  TABLE Vendos</div><div class="line">DROP COULUMN vend_phone;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">----删除表-------</div><div class="line">DROP TABLE CustCopy ;</div></pre></td></tr></table></figure>
+<ul>
+<li>每个DBMS对表重命名的支持有所不同。对于这个操作，不存在严格的标准。DB2、MariaDB、My SQL、Oracle和PostgreSQL用户使<br>用RENAME语句，SQL  Server用户使用sp_rename存储过程，SQLite用户使用ALTER TABLE语句。</li>
+</ul>
+<h1 id="使用视图"><a href="#使用视图" class="headerlink" title="使用视图"></a>使用视图</h1><blockquote>
+<p>CREATE  VIEW viewname</p>
+</blockquote>
+<ul>
+<li>视图是虚拟的表</li>
+<li>视图可以重用SQL语句</li>
+<li>可以简化复杂SQL操作，在编写查询后，可以方便重用它，而不必知道其查询的细节</li>
+<li>使用表的一部分而不是整个表</li>
+<li>保护数据</li>
+<li>更改数据的表现格式</li>
+<li>视图不包含数据，每次使用的时候都会重新检索，因此如果特别复杂的SQL查询性能会下降的很厉害。</li>
+</ul>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="comment">---创建视图------</span></div><div class="line"><span class="keyword">CREATE</span> <span class="keyword">VIEW</span> ProductCustomers <span class="keyword">AS</span></div><div class="line"><span class="keyword">SELECT</span> cust_name,cust_contact,prod_id</div><div class="line"><span class="keyword">FROM</span> Customers,Orders,OrderItems</div><div class="line"><span class="keyword">WHERE</span> Customers.cust_id = Orders.cust_id <span class="keyword">AND</span> OrderItems.order_item = Orders.order_num</div><div class="line"><span class="comment">---查看视图-----------</span></div><div class="line"><span class="comment">--这条语句创建一个名为ProductCustomers的视图，它联结三个表，返回已订购了任意产品的所有顾客的列表。</span></div><div class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> ProductCustomers</div><div class="line"><span class="comment">--检索订购了产品RGA N01的顾客</span></div><div class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> ProductCustomers</div><div class="line"><span class="keyword">WHERE</span> prod_id = <span class="string">'RGAN01'</span></div><div class="line"><span class="comment">----用视图重新格式化检索数据------</span></div><div class="line"><span class="keyword">CREATE</span> <span class="keyword">VIEW</span> VendorLocations <span class="keyword">AS</span></div><div class="line"><span class="keyword">SELECT</span> <span class="keyword">RTRIM</span>(vend_name)+<span class="string">'('</span>+<span class="keyword">RTRIM</span>(vend_country)+<span class="string">')'</span> <span class="keyword">AS</span>  vend_title</div><div class="line"><span class="keyword">FROM</span> Vendors</div></pre></td></tr></table></figure>
+<h1 id="使用存储过程-批处理"><a href="#使用存储过程-批处理" class="headerlink" title="使用存储过程(批处理)"></a>使用存储过程(批处理)</h1><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">CREATE</span> <span class="keyword">PROCEDURE</span> MailingListCount</div><div class="line"><span class="keyword">AS</span></div><div class="line"><span class="keyword">DECLARE</span> @cnt <span class="built_in">INTEGER</span></div><div class="line"><span class="keyword">SELECT</span> @cnt = <span class="keyword">COUNT</span>(*)</div><div class="line"><span class="keyword">FROM</span> Customers</div><div class="line"><span class="keyword">WHERE</span> <span class="keyword">NOT</span> cust_email <span class="keyword">IS</span> <span class="literal">NULL</span></div><div class="line"><span class="keyword">RETURN</span> @cnt</div><div class="line"></div><div class="line"><span class="keyword">DECLARE</span> @ReturnValue <span class="built_in">INT</span></div><div class="line"><span class="keyword">EXECUTE</span> @ReturnValue=MailingListCount;</div><div class="line"><span class="keyword">SELECT</span> @ReturnValue</div></pre></td></tr></table></figure>
+<ul>
+<li>在Orders表中插入一个新订单</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">CREATE PROCEDURE NewOrder @cust_id CHAR(10)</div><div class="line">AS</div><div class="line">--Declare variable for order number</div><div class="line">DECLARE @order_num INTEGER</div><div class="line">--Get current highest order number</div><div class="line">SELECT @order_num = MAX(order_num)</div><div class="line">FROM Orders</div><div class="line">--Determine next order number</div><div class="line">SELECT @order_num = @order_num+1</div><div class="line">--Insert new order</div><div class="line">INSERT INTO Orders(order_num,order_date,cust_id)</div><div class="line">VALUES(@order_num,GETDATE(),@cust_id)</div><div class="line">--Return order number</div><div class="line">RETURN @order_num;</div></pre></td></tr></table></figure>
+<ul>
+<li>此存储过程在O rders表中创建一个新订单。它只有一个参数，即下订单顾客的I D。订单号和订单日期这两列在存储过程中自动生成。代码首先声明一个局部变量来存储订单号。接着，检索当前最大订单号（使用MA X()函数）并增加1（使用SELECT 语句）。然后用INSERT 语句插入由新生成的订单号、当前系统日期（用GET DA T E()函数检索）和传递的顾客I D组成的订单。最后，用RET U RN @order_num返回订单号（处理订单物品需要它）。请注意，此代码加了注释，在编写存储过程时应该多加注释</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">CREATE PROCEDURE NewOrder @cust_id CHAR(10)</div><div class="line">AS</div><div class="line">--Insert new order</div><div class="line">INSERT INFO Orders(cust_id)</div><div class="line">VALUES(@cust_id)</div><div class="line">--Return order number</div><div class="line">SELECT order_num = @@IDENTITY</div></pre></td></tr></table></figure>
+<ul>
+<li>此存储过程也在Orders表中创建一个新订单。这次由DBMS生成订单号。大多数DBMS都支持这种功能；SQL  Serv er中称这些自动增量的列为标识字段（i den t i t y   f i el d），而其他DBMS称之为自动编号（au t o  n u mber）或序列（sequ en ce）。传递给此过程的参数也是一个，即下订单的顾客ID。订单号和订单日期没有给出，DBMS对日期使用默认值（GETDATE()函数），订单号自动生成。怎样才能得到这个自动生成的I D？在SQL  Serv er上可在全局变量@@IDENT ITY 中得到，它返回到调用程序（这里使用SELECT 语句）。</li>
+</ul>
+<h1 id="管理事务处理（transaction-processing）"><a href="#管理事务处理（transaction-processing）" class="headerlink" title="管理事务处理（transaction processing）"></a>管理事务处理（transaction processing）</h1><blockquote>
+<p>COMMIT 和ROLLBACK语句</p>
+</blockquote>
+<ul>
+<li>事务处理是通过确保成批SQL操作要么完全执行，要么完全不执行</li>
+<li>在使用事务处理时，有几个反复出现的关键词。下面是关于事务处理需要知道的几个术语：</li>
+</ul>
+<ol>
+<li>事务（transaction ）指一组SQL语句；</li>
+<li>回退（rollback）指撤销指定SQL语句的过程；</li>
+<li>提交（commit）指将未存储的SQL语句结果写入数据库表；</li>
+<li>保留点（savepoint）指事务处理中设置的临时占位符（pl aceholder），可以对它发布回退（与回退整个事务处理不同）。</li>
+</ol>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">BEGINT RANSACTION</div><div class="line">INSERT INTO Customers(cust_id,cust_name)</div><div class="line">VALUES('1000000010','ToysEmporium');</div><div class="line">--定义保存点</div><div class="line">SAVE TRANSACTION StartOrder;</div><div class="line">INSERT INTO Orders(order_num,order_date,cust_id)</div><div class="line">VALUES(20100,'2001/12/1','1000000010');</div><div class="line">--若执行不成功就回退到保存点</div><div class="line">IF @@ERROR&lt;&gt;0 ROLLBACK TRANSACTION StartOrder;</div><div class="line">INSERT INTO OrderItems(order_num,order_item,prod_id,quantity,item_price)</div><div class="line">VALUES(20100,1,'BR01',100,5.49);</div><div class="line">IF @@ERROR&lt;&gt;0 ROLLBACK TRANSACTION StartOrder;</div><div class="line">INSERT INTO OrderItems(order_num,order_item,prod_id,quantity,item_price)</div><div class="line">VALUES(20100,2,'BR03',100,10.99);</div><div class="line">IF @@ERROR&lt;&gt;0 ROLLBACK TRANSACTION StartOrder;</div><div class="line">COMMIT TRANSACTION</div></pre></td></tr></table></figure>
+<h1 id="使用游标"><a href="#使用游标" class="headerlink" title="使用游标"></a>使用游标</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div></pre></td><td class="code"><pre><div class="line">--创建游标</div><div class="line">--在上面两个版本中，DECLA RE语句用来定义和命名游标，这里为CustCursor。SELECT 语句定义一个包含没有电子邮件地址（NU LL值）的所有</div><div class="line">顾客的游标。</div><div class="line">DECLARE CustCursor CURSOR</div><div class="line">FOR</div><div class="line">SELECT * FROM Customers</div><div class="line">WHERE cust_email is NULL</div><div class="line">---------------------</div><div class="line">DECLARE @cust_id CHAR(10),</div><div class="line">        @cust_name CHAR(50),</div><div class="line">        @cust_address CHAR(50),</div><div class="line">        @cust_city CHAR(50),</div><div class="line">        @cust_state CHAR(5),</div><div class="line">        @cust_zip CHAR(10),</div><div class="line">        @cust_country CHAR(50),</div><div class="line">        @cust_contact CHAR(50),</div><div class="line">        @cust_email CHAR(255)</div><div class="line">OPEN CustCursor</div><div class="line">FETCH NEXT FROM CustCursor</div><div class="line">INTO @cust_id,@cust_name,@cust_address,</div><div class="line">     @cust_city,@cust_state,@cust_zip,</div><div class="line">     @cust_country,@cust_contact,@cust_email</div><div class="line">WHILE @@FETCH_STATUS=0</div><div class="line">BEGIN</div><div class="line">    --占位符</div><div class="line">FETCH NEXT FROM CustCursor</div><div class="line">	INTO @cust_id,@cust_name,@cust_address,</div><div class="line">         @cust_city,@cust_state,@cust_zip,</div><div class="line">         @cust_country,@cust_contact,@cust_email</div><div class="line">END</div><div class="line">CLOSE CustCursor</div><div class="line">DEALLOCATE  CustCursor</div></pre></td></tr></table></figure>
+<ul>
+<li>在此例中，为每个检索出的列声明一个变量，FET CH语句检索一行并保存值到这些变量中。使用WHILE循环处理每一行，条件WHILE @@FET CH_ST A T U S = 0在取不出更多的行时终止处理（退出循环）。这个例子也不进行具体的处理，实际代码中，应该用具体的处理代码替换其中的…占位符。</li>
+</ul>
+<h1 id="高级SQL特性"><a href="#高级SQL特性" class="headerlink" title="高级SQL特性"></a>高级SQL特性</h1><h2 id="约束"><a href="#约束" class="headerlink" title="约束"></a>约束</h2><h2 id="索引"><a href="#索引" class="headerlink" title="索引"></a>索引</h2><h2 id="触发器"><a href="#触发器" class="headerlink" title="触发器"></a>触发器</h2>
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/SQL/" rel="tag">#SQL</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/05/03/如何做一份优秀的 用户体验报告 - 副本/" rel="next" title="如何做一份优秀的用户体验报告">
+                <i class="fa fa-chevron-left"></i> 如何做一份优秀的用户体验报告
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/uploads/avatar.jpg"
+               alt="lula" />
+          <p class="site-author-name" itemprop="name">lula</p>
+          <p class="site-description motion-element" itemprop="description"></p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">4</span>
+              <span class="site-state-item-name">posts</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-name">categories</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-name">tags</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/lula-lilu" target="_blank" title="github">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  github
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://douban.com/people/lula" target="_blank" title="douban">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  douban
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#检索数据"><span class="nav-number">1.</span> <span class="nav-text">检索数据</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#排序数据"><span class="nav-number">2.</span> <span class="nav-text">排序数据</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#过滤语句"><span class="nav-number">3.</span> <span class="nav-text">过滤语句</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#模糊过滤"><span class="nav-number">4.</span> <span class="nav-text">模糊过滤</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#字段计算"><span class="nav-number">5.</span> <span class="nav-text">字段计算</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#函数"><span class="nav-number">6.</span> <span class="nav-text">函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#分组数据"><span class="nav-number">7.</span> <span class="nav-text">分组数据</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#嵌套查询"><span class="nav-number">8.</span> <span class="nav-text">嵌套查询</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#连接表"><span class="nav-number">9.</span> <span class="nav-text">连接表</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#组合查询"><span class="nav-number">10.</span> <span class="nav-text">组合查询</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#插入数据"><span class="nav-number">11.</span> <span class="nav-text">插入数据</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#更新删除数据"><span class="nav-number">12.</span> <span class="nav-text">更新删除数据</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#创建和操纵类"><span class="nav-number">13.</span> <span class="nav-text">创建和操纵类</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#使用视图"><span class="nav-number">14.</span> <span class="nav-text">使用视图</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#使用存储过程-批处理"><span class="nav-number">15.</span> <span class="nav-text">使用存储过程(批处理)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#管理事务处理（transaction-processing）"><span class="nav-number">16.</span> <span class="nav-text">管理事务处理（transaction processing）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#使用游标"><span class="nav-number">17.</span> <span class="nav-text">使用游标</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#高级SQL特性"><span class="nav-number">18.</span> <span class="nav-text">高级SQL特性</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#约束"><span class="nav-number">18.1.</span> <span class="nav-text">约束</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#索引"><span class="nav-number">18.2.</span> <span class="nav-text">索引</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#触发器"><span class="nav-number">18.3.</span> <span class="nav-text">触发器</span></a></li></ol></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">lula</span>
+</div>
+
+<div class="powered-by">
+  Powered by <a class="theme-link" href="https://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+<span id="busuanzi_container_site_uv">
+  你是第<span id="busuanzi_value_site_uv"></span>个访问本站的人
+</span>
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
