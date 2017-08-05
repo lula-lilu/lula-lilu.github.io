@@ -1,0 +1,972 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, Lula" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="这套课程的课后作业挺多，而且听完课程之后可操作性很好，至少知道应该从哪些方面开始下手，而且对于之前觉得很大的问题开始知道从哪些方面开始分析和下手了。收获最大的还是在第二部分的习题，对于产品的拆解，从用户场景需求开始，到业务逻辑，业务流程图，页面流程图，原型设计，最后到需求文档的撰写。
+
+
+用产品生命周期图分析产品迭代
+分析用户反馈（02 用户分析）
+分析典型用户的使用场景（02 用户分析）
+需求优">
+<meta property="og:type" content="article">
+<meta property="og:title" content="三节课产品P1课程思考题作业">
+<meta property="og:url" content="http://lula-lilu.github.io/2017/08/05/三节课产品P1课程思考题/index.html">
+<meta property="og:site_name" content="lula">
+<meta property="og:description" content="这套课程的课后作业挺多，而且听完课程之后可操作性很好，至少知道应该从哪些方面开始下手，而且对于之前觉得很大的问题开始知道从哪些方面开始分析和下手了。收获最大的还是在第二部分的习题，对于产品的拆解，从用户场景需求开始，到业务逻辑，业务流程图，页面流程图，原型设计，最后到需求文档的撰写。
+
+
+用产品生命周期图分析产品迭代
+分析用户反馈（02 用户分析）
+分析典型用户的使用场景（02 用户分析）
+需求优">
+<meta property="og:image" content="http://oczbwvoof.bkt.clouddn.com/17-7-24/63210392.jpg">
+<meta property="og:image" content="http://oczbwvoof.bkt.clouddn.com/17-7-29/47714829.jpg">
+<meta property="og:image" content="http://oczbwvoof.bkt.clouddn.com/17-7-29/30231572.jpg">
+<meta property="og:image" content="http://oczbwvoof.bkt.clouddn.com/17-8-1/18300364.jpg">
+<meta property="og:image" content="http://oczbwvoof.bkt.clouddn.com/17-8-1/80667397.jpg">
+<meta property="og:image" content="http://oczbwvoof.bkt.clouddn.com/17-8-2/78107432.jpg">
+<meta property="og:image" content="http://oczbwvoof.bkt.clouddn.com/17-8-2/40315974.jpg">
+<meta property="og:image" content="http://oczbwvoof.bkt.clouddn.com/17-8-2/78360801.jpg">
+<meta property="og:image" content="http://oczbwvoof.bkt.clouddn.com/17-8-2/31942183.jpg">
+<meta property="og:image" content="http://oczbwvoof.bkt.clouddn.com/17-8-3/41582452.jpg">
+<meta property="og:image" content="http://oczbwvoof.bkt.clouddn.com/17-8-3/13116973.jpg">
+<meta property="og:image" content="http://oczbwvoof.bkt.clouddn.com/17-8-3/97044330.jpg">
+<meta property="og:image" content="http://oczbwvoof.bkt.clouddn.com/17-8-4/24674428.jpg">
+<meta property="og:image" content="http://oczbwvoof.bkt.clouddn.com/17-8-4/91351970.jpg">
+<meta property="og:image" content="http://oczbwvoof.bkt.clouddn.com/17-8-4/70917161.jpg">
+<meta property="og:image" content="http://oczbwvoof.bkt.clouddn.com/17-8-5/34907883.jpg">
+<meta property="og:image" content="http://oczbwvoof.bkt.clouddn.com/17-8-5/99486692.jpg">
+<meta property="og:image" content="http://oczbwvoof.bkt.clouddn.com/17-8-5/94113604.jpg">
+<meta property="og:image" content="http://oczbwvoof.bkt.clouddn.com/17-8-5/19376397.jpg">
+<meta property="og:image" content="http://oczbwvoof.bkt.clouddn.com/17-8-5/54561435.jpg">
+<meta property="og:image" content="http://oczbwvoof.bkt.clouddn.com/17-8-5/32371891.jpg">
+<meta property="og:updated_time" content="2017-08-05T12:44:11.135Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="三节课产品P1课程思考题作业">
+<meta name="twitter:description" content="这套课程的课后作业挺多，而且听完课程之后可操作性很好，至少知道应该从哪些方面开始下手，而且对于之前觉得很大的问题开始知道从哪些方面开始分析和下手了。收获最大的还是在第二部分的习题，对于产品的拆解，从用户场景需求开始，到业务逻辑，业务流程图，页面流程图，原型设计，最后到需求文档的撰写。
+
+
+用产品生命周期图分析产品迭代
+分析用户反馈（02 用户分析）
+分析典型用户的使用场景（02 用户分析）
+需求优">
+<meta name="twitter:image" content="http://oczbwvoof.bkt.clouddn.com/17-7-24/63210392.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: undefined,
+      author: 'Author'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://lula-lilu.github.io/2017/08/05/三节课产品P1课程思考题/"/>
+
+  <title> 三节课产品P1课程思考题作业 | lula </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">lula</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            About
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                三节课产品P1课程思考题作业
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2017-08-05T20:41:00+08:00" content="2017-08-05">
+              2017-08-05
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/产品/" itemprop="url" rel="index">
+                    <span itemprop="name">产品</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>这套课程的课后作业挺多，而且听完课程之后可操作性很好，至少知道应该从哪些方面开始下手，而且对于之前觉得很大的问题开始知道从哪些方面开始分析和下手了。收获最大的还是在第二部分的习题，对于产品的拆解，从用户场景需求开始，到业务逻辑，业务流程图，页面流程图，原型设计，最后到需求文档的撰写。</p>
+<!-- toc -->
+<ul>
+<li><a href="#用产品生命周期图分析产品迭代">用产品生命周期图分析产品迭代</a></li>
+<li><a href="#分析用户反馈02-用户分析">分析用户反馈（02 用户分析）</a></li>
+<li><a href="#分析典型用户的使用场景02-用户分析">分析典型用户的使用场景（02 用户分析）</a></li>
+<li><a href="#需求优先级排序02需求分析">需求优先级排序（02需求分析）</a></li>
+<li><a href="#分析产品03-产品调研">分析产品（03 产品调研）</a></li>
+<li><a href="#软件流程分析04-功能与流程">软件流程分析（04 功能与流程）</a></li>
+<li><a href="#分析功能页面流程图05-原型设计和prd">分析功能页面流程图（05 原型设计和PRD）</a></li>
+<li><a href="#原型设计05-原型设计和prd">原型设计（05 原型设计和PRD）</a></li>
+<li><a href="#需求文档05-原型设计和prd">需求文档（05 原型设计和PRD）</a></li>
+</ul>
+<!-- tocstop -->
+<a id="more"></a>
+<h2 id="用产品生命周期图分析产品迭代"><a href="#用产品生命周期图分析产品迭代" class="headerlink" title="用产品生命周期图分析产品迭代"></a>用产品生命周期图分析产品迭代</h2><blockquote>
+<p>思考题1： 下图为三节课同学总结的爱鲜蜂的产品生命周期图，说说看你认为图中爱鲜蜂现在处于哪个生命周期阶段，为了用户增长，爱鲜蜂都做了哪些努力呢？<br>TIPs:</p>
+<ul>
+<li>在之前爱先锋的发展过程中，他们做了哪些努力<ul>
+<li>现在的爱鲜蜂，你觉得他应该如何做</li>
+<li>从拉新和留存不同的角度来分析</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<p><img src="http://oczbwvoof.bkt.clouddn.com/17-7-24/63210392.jpg" alt=""></p>
+<p><strong>Q1.你认为图中爱先锋处于哪个生命和周期阶段？</strong><br>    处于成长期，从2014年的1.0版本到2015/06/01的2.0版本，可以看到迭代版本次数较少，主要是集中产品的基本功能迭代。而在v2.0开始进入成长期，开始在提升平台内的商品的品种并在运营上下力。在2015/11/01的v2.5版本基于双十一的运营推广取得了很好的效果，进入快速成长期。</p>
+<p><strong>Q2. 为了用户增长做了哪些努力</strong></p>
+<ol>
+<li>产品功能更新，更加易用.<ul>
+<li>增加确认收货，消息中心，收货地址，地图确认，在线客服催单，收藏，自提，订单追踪等基本功能</li>
+<li>增加活动支持，优惠券绑定，分享红包，促销标签等支持运营工作的功能</li>
+</ul>
+</li>
+<li>丰富商品种类,水果零食等</li>
+<li>运营活动<ul>
+<li>分享红包，满赠，满返，抽奖活动</li>
+<li>双十二大促</li>
+</ul>
+</li>
+</ol>
+<p><strong>Q3. 现在应该怎么做，从拉新和留存的角度</strong></p>
+<ol>
+<li>拉新：增加分享红包，邀请好友得奖励等活动，同时举办主题日，扩大知名度</li>
+<li>留存：分析已有的水果零食等销售数据，提供更符合用户需求的内容商品。小幅优化软件基本功能，完善用户浏览下单支付的整个流程，提升用户体验。</li>
+</ol>
+<h2 id="分析用户反馈02-用户分析"><a href="#分析用户反馈（02-用户分析）" class="headerlink" title="分析用户反馈（02 用户分析）"></a>分析用户反馈（02 用户分析）</h2><blockquote>
+<p>思考题2：分析简书在AppStore的点评情况。简要说明好评（4-5分）和低分（1-3分）的原因，并找出二十条有效的低分评价进行分析，并分类说明问题方向，给出行动计划。</p>
+</blockquote>
+<p><strong>好评</strong> </p>
+<ol>
+<li>写作编辑器易用，满足用户的表达欲</li>
+<li>界面简洁，字体设计舒适</li>
+<li>没有广告</li>
+</ol>
+<p><strong>差评</strong></p>
+<ol>
+<li>内容运营问题，首页推送文章质量不高，原创保护不够，社群运营混乱</li>
+<li>内容审查，敏感词过滤，投稿修改多次无法发布</li>
+<li>没有账号申诉通道，用户被封号后没有反馈途径</li>
+<li>软件不稳定和Bug问题，网络连接问题，注册登录问题</li>
+</ol>
+<p><strong>行动计划：</strong></p>
+<ol>
+<li>首先需要解决内容运营问题，提高对版块编辑的要求，进行培训，挖掘优质内容，并进行推广，激励用户进行创作。</li>
+<li>增加用户参与力度，推荐喜欢优秀的内容上首页，让优质内容自己浮出</li>
+<li>在账号封禁前先禁言，并提供可沟通渠道，降低用户的生气值以及由此带来的负面评价</li>
+<li>首先提供良好的用户反馈途径，维护软件的稳定和细节的修复，维护简书在用户心中的简约和设计感的形象。</li>
+</ol>
+<blockquote>
+<p>思考题3：整理百度外卖在新浪微博的用户反馈</p>
+<pre><code>1. 自定义关键词，找出30条用户的差评反馈
+2. 对用户反馈进行分类，简要分析问题的原因
+3. 并对应分析，给出行动计划
+</code></pre></blockquote>
+<p><strong>差评原因分类：</strong></p>
+<ol>
+<li>配送慢（21/30）</li>
+<li>外卖小哥问题：运送过程造成食物损坏（1），配送员态度不好（2），配送员电话骚扰（1），配送疏漏（2）</li>
+<li>外卖商家问题：食物以烂充好（5），店家老板电话报复（2）</li>
+<li>平台问题：客服服务不及时，没有合理解决方案（3）软件设计问题（2）退款慢（1）</li>
+</ol>
+<p><strong>行动计划</strong></p>
+<ol>
+<li>配送慢问题，是目前投诉最多的，投诉的配送时长大多超过一个小时。解决这个问题分为两个方面，一个是降低用户的预期，二是提高配送员效率。降低用户预期上，百度外卖之前有上线一个实时显示配送员位置，但是因为配送员可能一次送多单外卖，出现地图上明明很靠近但是又去了别的地方送外卖的情形，解决办法给外卖小哥的配送路线规划设计，可能需要加大订单先后顺序的权重，同时可以在地图上显示正在配送的份数，让用户了解到是同时配送多份外卖。在配送时间预测上更宽松一点，降低用户的时间预期。</li>
+<li>外卖小哥的问题：现在主要通过惩罚的方式约束配送员的态度问题，但是太严厉的惩罚也会让配送员患得患失，奖惩并行的方式可能更好，配送的损坏和疏漏都可以通过软件提醒，百度外卖也有专门的配送箱，出现少数这种情况也希望能够安抚好用户。</li>
+<li>外卖商家：有很多投诉集中在食物的问题，这部分只能通过更加严厉的审核，以及对于用户对商家产品的投诉更加重视，因为这些是平台最重要的内容，而且一旦形成对平台内商家的怀疑态度就会引发对其他的蔓延怀疑。</li>
+<li>平台的问题：投诉的最多的是客服的处理结果不及时，没有合理解决方案。投诉到平台的已经是在和商家配送员沟通无效的情况了，所以这个时候用户很有可能心情已经非常差，所以客服要能够像“淘宝小二”一样的有一种公平的形象，并提供及时的处理。</li>
+</ol>
+<h2 id="分析典型用户的使用场景02-用户分析"><a href="#分析典型用户的使用场景（02-用户分析）" class="headerlink" title="分析典型用户的使用场景（02 用户分析）"></a>分析典型用户的使用场景（02 用户分析）</h2><blockquote>
+<p>思考题4：假如你是某外卖APP的产品经理，为了提升下单量，你试着分析外卖的2~3类典型用户，选出其中一类用户，细致分析他们对应的使用场景，并推测出影响使用APP下订单的关键因素。</p>
+</blockquote>
+<p><img src="http://oczbwvoof.bkt.clouddn.com/17-7-29/47714829.jpg" alt=""></p>
+<blockquote>
+<p>思考题5：找到“大众点评”的2-3中典型用户+分别在APP评论里找出这些用户有代表性的评论并分析原因</p>
+</blockquote>
+<p><img src="http://oczbwvoof.bkt.clouddn.com/17-7-29/30231572.jpg" alt=""></p>
+<h2 id="需求优先级排序02需求分析"><a href="#需求优先级排序（02需求分析）" class="headerlink" title="需求优先级排序（02需求分析）"></a>需求优先级排序（02需求分析）</h2><blockquote>
+<p>思考题7：滴滴打车早期第一版核心打车功能已上线，现在需要进行功能迭代，从以下功能里请运用所学知识完成优先级排序</p>
+</blockquote>
+<ol>
+<li>新增”愿等时间“，多等司机一小会儿，提高打车成功率～</li>
+<li>电量优化，叫车更省电</li>
+<li>优先文字叫车，更易更快打到车</li>
+<li>定位信号弱时，可自己设置上车点</li>
+<li>支付时默认选券，省钱更便捷</li>
+<li>即时聊天开放，沟通更方便</li>
+</ol>
+<p><strong>要求：</strong>至少从频率、开发难度和效果；产品价值和对用户熟悉程度 这些角度，通过四象限法进行优先级排列，并写清楚对应的优先级。</p>
+<p>做这道题的时候发现虽然有这么多维度可以思考，但是不同的人的划分标准还是会差别很大。特别是有看到两个同学的作业结果完全不一样，每个人对于用户量和使用频率的效果的感知都不一样。</p>
+<p>频率和用户量<br><img src="http://oczbwvoof.bkt.clouddn.com/17-8-1/18300364.jpg" alt=""><br><img src="http://oczbwvoof.bkt.clouddn.com/17-8-1/80667397.jpg" alt=""></p>
+<h2 id="分析产品03-产品调研"><a href="#分析产品（03-产品调研）" class="headerlink" title="分析产品（03 产品调研）"></a>分析产品（03 产品调研）</h2><blockquote>
+<p>思考题8：聚美优品APP最近上线了直播功能，如图：假如你是唯品会的产品助理，现在领导希望你对此做认真的分析.<br>1、简要说明聚美优品直播板块是做什么的？<br>2、分析直播社区的业务逻辑<br>3、给出你总结出的结论</p>
+</blockquote>
+<p><strong>聚美优品直播功能分析</strong></p>
+<ol>
+<li><p>简要说明聚美优品直播板块是做什么的？<br>聚美优品的直播模块就是主播达人通过分享自己的购物/美妆/护肤等经验吸引用户观看并引发购买，提升商品销售和主播收入。<br>| 用户   | 使用场景                                 | 满足的需求       |<br>| —- | ———————————— | ———– |<br>| 主播达人 | 上架了新的商品，如何推广出去，如何把粉丝转化为购买力           | 个人品牌+收入     |<br>| 普通用户 | 不知道买什么性价比比较好，想看看美妆技巧和怎么用的+怕买到假货，相信主播 | 需要导购+学习化妆技巧 |</p>
+</li>
+<li><p>产品逻辑</p>
+<p><img src="http://oczbwvoof.bkt.clouddn.com/17-8-2/78107432.jpg" alt=""></p>
+</li>
+<li>分析与结论</li>
+</ol>
+<p>如果我是唯品会的产品，我的建议是不抄。</p>
+<pre><code>- 从平台定位来看：唯品会定位是做特卖的网站，而聚美优品则主打美妆产品。唯品会的商品种类有很多，除了美妆之外品类通过直播也很难进行推广，而且唯品会的产品大部分具有时效性，主播可能无法跟得上商品的上新和下架速度
+- 从数据表现来看：从聚美更新直播功能后，在明星入驻的时候带来大量的粉丝流量，后期的直播数量和关注人数都不多
+</code></pre><blockquote>
+<p>思考题9：观察网易新闻客户端和今日头条产品的新闻详情页分别先找2-3个相同和不同的功能，分析关键功能的差异，给出结论，说说各个产品的优点缺点和亮点之类的。</p>
+</blockquote>
+<ul>
+<li><p>功能分析<br><img src="http://oczbwvoof.bkt.clouddn.com/17-8-2/40315974.jpg" alt=""></p>
+</li>
+<li><p>关键功能差异<br>| 关键功能差异 | 网易新闻                            | 今日头条              |<br>| —— | ——————————- | —————– |<br>| 内容来源   | 多为网站编辑转采，部分来源于自媒体               | 全部为头条号自媒体         |<br>| 评论功能   | 多年来网易新闻的特色，一级页面能够显示多次评论的过程，可以截图 | 查看评论的评论需要点击二级页面查看 |</p>
+</li>
+</ul>
+<ul>
+<li>结论</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>–</th>
+<th>网易新闻</th>
+<th>今日头条</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>优点</td>
+<td>社区新闻评论的氛围好，互动跟贴用户参与度高，并且在页面上突出显示跟贴数量</td>
+<td>个性化推荐也是今日头条最突出的品牌印象</td>
+</tr>
+<tr>
+<td>缺点</td>
+<td>个性化推荐不够，没有tag分类查看相关新闻</td>
+<td>内容太多太杂，评论之间的互动不如网易新闻</td>
+</tr>
+</tbody>
+</table>
+<h2 id="软件流程分析04-功能与流程"><a href="#软件流程分析（04-功能与流程）" class="headerlink" title="软件流程分析（04 功能与流程）"></a>软件流程分析（04 功能与流程）</h2><blockquote>
+<p>思考题10：根据自己的理解，请对APP 小恩爱的手机找回密码流程进行梳理。</p>
+<p>作业要求：</p>
+<p>体验这款产品上述的功能模块。<br>梳理此功能的业务流程，绘制流程图（包含主流程，异常流程，提示和引导，判断等），流程图绘制工具不限，可使用Visio、Axure等软件，也可使用ProcessOn、Gliffy Editor等在线工具。<br>请对此流程进行优缺点分析，并得出结论。</p>
+</blockquote>
+<p><img src="http://oczbwvoof.bkt.clouddn.com/17-8-2/78360801.jpg" alt=""></p>
+<ul>
+<li>优点<br>注册验证，验证码验证，密码验证流程都比较完备</li>
+<li>缺点</li>
+</ul>
+<ol>
+<li>找回方式分为手机号和密码，步骤过于繁琐，也有可能用户已经忘记</li>
+<li>先弹出发送验证码的请求，之后才提示未注册，增加了用户的操作</li>
+<li>密码设置的时候没有规则提示</li>
+</ol>
+<blockquote>
+<p>思考题11 下图是某教育官网的注册转化率，图一是在PC端，官网注册转化率；图二是在移动端，APP的注册转化率；图三是官网注册资料填写界面；图四是移动端，H5注册资料填写界面。</p>
+</blockquote>
+<p>请仔细分析两个图，找到问题的关键点，猜测问题可能的原因，根据你的猜测给出产品迭代建议。<br><img src="http://oczbwvoof.bkt.clouddn.com/17-8-2/31942183.jpg" alt=""></p>
+<p>PC端（注册总转化率较高）</p>
+<ul>
+<li>衰减最大的是【验证手机号-点击下一步】的操作</li>
+<li>可能的原因是手机验证码是否能够及时收到的问题。</li>
+<li>迭代建议：优化验证码技术+尝试语音验证码</li>
+</ul>
+<p>移动端（注册总转化率比PC低很多）</p>
+<ul>
+<li><p>衰减1：对比漏斗设置有些问题，因为移动端浏览页面可能只是看课程，并不一定想要注册，而PC端的首个页面就是注册也就是进入页面的已经是打算注册的人.这个部分衰减率大主要是移动端看完课程并没有直接动力去注册，所以可以设置观看课程的一部分之后跳弹窗提示注册后观看全部内容。</p>
+</li>
+<li><p>衰减2：点击注册到浏览注册页面，此步骤中没有其他操作，可能是跳转时间过长。</p>
+</li>
+</ul>
+<blockquote>
+<p>思考题12： 复原火辣健身的用户密码找回功能。<br>提示，可以从以下几个方面来着重考虑：</p>
+<ol>
+<li>对于不同的用户使用场景是否要有不同的判断？</li>
+<li>画出完整的流程图（另外需要注意，和正常的修改密码，有什么不一样）</li>
+<li>有什么优点或者提升空间吗？</li>
+</ol>
+</blockquote>
+<ul>
+<li>用户场景<br><img src="http://oczbwvoof.bkt.clouddn.com/17-8-3/41582452.jpg" alt=""><br>虽然用户场景有很多，但是需求和解决的路径都是一样的，因此不需要区分。</li>
+<li>流程图<br>流程图和上面的基本类似，主要也是<strong>验证是否已经注册</strong>/<strong>验证验证码</strong>/<strong>验证新密码的合法性</strong>三个步骤</li>
+<li>和修改密码的区别：修改密码是已经登录状态；修改密码的流程主要是<strong>验证原密码</strong>/<strong>验证新密码合法性</strong>两个步骤</li>
+<li>优点</li>
+</ul>
+<ol>
+<li>流程短操作简单，本地缓冲历史可以读取历史账户，减少用户输入</li>
+<li>输入时自动校验规则，在通过校验规则之后，下一步按钮才会点亮。</li>
+<li>一天内可获取的验证码次数为5次，节约短信成本和防止恶意刷</li>
+<li>密码重置后自动登录</li>
+<li>连续输入验证码3次之后自动失效，增加验证码安全性</li>
+</ol>
+<ul>
+<li>提升空间</li>
+</ul>
+<ol>
+<li>设置手机号密码时不能切换明文，增加用户误输的概率</li>
+<li>忘记密码隐藏过深</li>
+</ol>
+<blockquote>
+<p>思考题13：请分别对好奇心日报的登录、注册、找回密码流程进行梳理。<br>作业要求：<br>1.体验这款产品上述的功能模块。<br>2.梳理此功能的业务流程，绘制流程图（包含主流程，异常流程，提示和引导等），流程图绘制工具不限，可使用Visio、Axure等软件，也可使用ProcessOn、Gliffy Editor等在线工具。<br>3.注意主流程和支线流程，复杂的支线流程可以单独画。<br>4.请对此流程进行优缺点分析，并得出结论。</p>
+</blockquote>
+<p>体验版本：好奇心日报3.1.11<br>设备系统：Android 7.1.1<br><img src="http://oczbwvoof.bkt.clouddn.com/17-8-3/13116973.jpg" alt=""></p>
+<ul>
+<li>优点</li>
+</ul>
+<ol>
+<li>整体体验过程比较流畅，跳转逻辑没有大的问题。</li>
+<li>首页没有强制登录，在想要评论的时候才会弹出登录界面和注册界面，用户体验佳</li>
+<li>第三方帐号登录流畅，登录结束之后没有要求绑定新帐号，很良心</li>
+<li>头像和简介都是可选项，避免用户在注册过程过长而放弃</li>
+<li>输入账户密码错误点击忘记密码时，自动填充账户名，不需要重复输入，用户体验佳</li>
+</ol>
+<ul>
+<li>缺点</li>
+</ul>
+<ol>
+<li>忘记密码重新设置之后返回的登录界面是空的，需要用户在此输入用户名和密码（可能是为了加强记忆）</li>
+<li>部分提示不准确，验证码超时提示的是“验证码不匹配”</li>
+<li>用户名和介绍不是必填项，但是没有注明。可以在注册之后再引导用户修改用户名。</li>
+</ol>
+<blockquote>
+<p>思考题14：在旅游的时候，碰到一个特别有意思的东西（自行脑补），然后就想发朋友圈分享一下。<br>那么问题来了，朋友圈发动态的这个功能的业务流程是什么呢？<br>提示：朋友圈动态有三种形式，单纯的文本动态、配图、配小视频。</p>
+</blockquote>
+<p>体验版本：微信6.5.10<br>设备系统：Android 7.1.1<br><img src="http://oczbwvoof.bkt.clouddn.com/17-8-3/97044330.jpg" alt=""></p>
+<h2 id="分析功能页面流程图05-原型设计和prd"><a href="#分析功能页面流程图（05-原型设计和PRD）" class="headerlink" title="分析功能页面流程图（05 原型设计和PRD）"></a>分析功能页面流程图（05 原型设计和PRD）</h2><blockquote>
+<p>思考题15：体验 enjoy app的 精品咖啡—即饮咖啡  频道  的购买流程，完成页面流程的设计。<br>Tips（请注意以下细节）：</p>
+<ol>
+<li>不要忽略异常流程的设计</li>
+<li>页面流程需要包含页面的关键元素</li>
+<li>考虑下游的触发点</li>
+<li>页面流程不是页面，不要贴页面~</li>
+</ol>
+</blockquote>
+<p><img src="http://oczbwvoof.bkt.clouddn.com/17-8-4/24674428.jpg" alt=""></p>
+<p><img src="http://oczbwvoof.bkt.clouddn.com/17-8-4/91351970.jpg" alt=""></p>
+<p>思考:</p>
+<ol>
+<li>enjoy 主打小资情调整个APP非常有设计感</li>
+<li>购物类APP是先诱导用户选购商品，只有在结算页面才会跳转到注册登录。而在这里Enjoy做了一个改进，直接输入手机号，并且把“获取验证码”改为了“下一步”，两步操作会让用户惯性操作，而没有意识到这个是一个注册操作。</li>
+</ol>
+<blockquote>
+<p>思考题16：页面流程是基于业务流程的具象化。<br>在天猫退货流程的基础上，根据自己的理解，完成天猫退货的相关页面流程。</p>
+</blockquote>
+<p><img src="http://oczbwvoof.bkt.clouddn.com/17-8-4/70917161.jpg" alt=""></p>
+<h2 id="原型设计05-原型设计和prd"><a href="#原型设计（05-原型设计和PRD）" class="headerlink" title="原型设计（05 原型设计和PRD）"></a>原型设计（05 原型设计和PRD）</h2><blockquote>
+<p>思考题17 体验APP 探探，按照自己的理解尝试，还原探探主流程页面（一级页面）功能。<br>作业要求：<br>1.体验这款产品上述的功能模块。<br>2.梳理此功能并还原该功能的原型，绘制工具不限，可使用Visio、Axure等软件，也可使用ProcessOn、Gliffy Editor等在线工具。<br>3.请对此流程进行优缺点分析，并得出结论。</p>
+</blockquote>
+<p>体验软件：探探2.7.74<br>体验环境：Android 7.1.1</p>
+<ol>
+<li><p>业务逻辑<br><img src="http://oczbwvoof.bkt.clouddn.com/17-8-5/34907883.jpg" alt=""></p>
+</li>
+<li><p>业务流程<br><img src="http://oczbwvoof.bkt.clouddn.com/17-8-5/99486692.jpg" alt=""></p>
+</li>
+<li><p>页面流程<br><img src="http://oczbwvoof.bkt.clouddn.com/17-8-5/94113604.jpg" alt=""></p>
+</li>
+<li><p>原型还原</p>
+</li>
+</ol>
+<p><img src="http://oczbwvoof.bkt.clouddn.com/17-8-5/19376397.jpg" alt=""></p>
+<ol>
+<li>优点</li>
+</ol>
+<ul>
+<li>操作简单（左右滑动即可）易上手，具有产品标识性</li>
+<li>真实头像审核（知乎上好像是说人工审核）更真诚</li>
+</ul>
+<ol>
+<li>缺点</li>
+</ol>
+<ul>
+<li>容易误操作，左右滑动很多时候具有惯性。建议设置每天有3次撤销机会。</li>
+<li>主界面图片为主，显示少量信息(年龄，性别，星座，工作），导致用户可能操作过快。建议可以用户自定义主页面显示的感兴趣的信息（限制为3-4个）</li>
+</ul>
+<blockquote>
+<p>思考题18：请还原好奇心日报分享功能。</p>
+</blockquote>
+<ul>
+<li>流程图<br><img src="http://oczbwvoof.bkt.clouddn.com/17-8-5/54561435.jpg" alt=""></li>
+<li>原型图<br><img src="http://oczbwvoof.bkt.clouddn.com/17-8-5/32371891.jpg" alt=""></li>
+</ul>
+<h2 id="需求文档05-原型设计和prd"><a href="#需求文档（05-原型设计和PRD）" class="headerlink" title="需求文档（05 原型设计和PRD）"></a>需求文档（05 原型设计和PRD）</h2><blockquote>
+<p>思考题19：我们之前已经完成了天猫退货流程的还原，和页面流程的设计，基于同学之前的努力，我们为这个功能写一份需求文档吧~在天猫退货流程的基础上，根据自己的理解，完成天猫退货功能的需求文档。<br>需求文档的结构可参考：</p>
+<ol>
+<li>项目背景与需求分析</li>
+<li>本次需求的目的及功能列表</li>
+<li>流程与所处的产品模块关系</li>
+<li>功能详细介绍</li>
+<li>简要的用例介绍</li>
+<li>考核指标与计算方法</li>
+</ol>
+</blockquote>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/08/05/三节课产品P1课程笔记（3-3）/" rel="next" title="三节课产品P1课程笔记（3/3）">
+                <i class="fa fa-chevron-left"></i> 三节课产品P1课程笔记（3/3）
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/uploads/avatar.jpg"
+               alt="lula" />
+          <p class="site-author-name" itemprop="name">lula</p>
+          <p class="site-description motion-element" itemprop="description"></p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">11</span>
+              <span class="site-state-item-name">posts</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-name">categories</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-name">tags</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/lula-lilu" target="_blank" title="github">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  github
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.douban.com/people/59715677/" target="_blank" title="douban">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  douban
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#用产品生命周期图分析产品迭代"><span class="nav-number">1.</span> <span class="nav-text">用产品生命周期图分析产品迭代</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#分析用户反馈02-用户分析"><span class="nav-number">2.</span> <span class="nav-text">分析用户反馈（02 用户分析）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#分析典型用户的使用场景02-用户分析"><span class="nav-number">3.</span> <span class="nav-text">分析典型用户的使用场景（02 用户分析）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#需求优先级排序02需求分析"><span class="nav-number">4.</span> <span class="nav-text">需求优先级排序（02需求分析）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#分析产品03-产品调研"><span class="nav-number">5.</span> <span class="nav-text">分析产品（03 产品调研）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#软件流程分析04-功能与流程"><span class="nav-number">6.</span> <span class="nav-text">软件流程分析（04 功能与流程）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#分析功能页面流程图05-原型设计和prd"><span class="nav-number">7.</span> <span class="nav-text">分析功能页面流程图（05 原型设计和PRD）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#原型设计05-原型设计和prd"><span class="nav-number">8.</span> <span class="nav-text">原型设计（05 原型设计和PRD）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#需求文档05-原型设计和prd"><span class="nav-number">9.</span> <span class="nav-text">需求文档（05 原型设计和PRD）</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">lula</span>
+</div>
+
+<div class="powered-by">
+  Powered by <a class="theme-link" href="https://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+<span id="busuanzi_container_site_uv">
+  你是第<span id="busuanzi_value_site_uv"></span>个访问本站的人
+</span>
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

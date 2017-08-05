@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="爬虫,可视化," />
+  <meta name="keywords" content="爬虫," />
 
 
 
@@ -94,7 +94,7 @@ PM2.5数据抓取和Echart3地图可视化
 任意一个知乎用户的所有回答内容抓取">
 <meta property="og:type" content="article">
 <meta property="og:title" content="简单爬虫工具与可视化(WebScraper)">
-<meta property="og:url" content="http://lula-lilu.github.io/2017/05/01/简单爬虫可视化/index.html">
+<meta property="og:url" content="http://lula-lilu.github.io/2017/05/01/简单爬虫工具与可视化(WebScraper)/index.html">
 <meta property="og:site_name" content="lula">
 <meta property="og:description" content="来源于三节课的一个限免爬虫课，其实就是一个WebScraper的介绍课程，看了一下视频发现其实可以直接在官网看教程，不过这个课程也提供了一些应用场景和实操的例子可以参考。
 主要内容：
@@ -114,7 +114,7 @@ PM2.5数据抓取和Echart3地图可视化
 <meta property="og:image" content="http://oczbwvoof.bkt.clouddn.com/17-5-1/16458425-file_1493647804470_52eb.png">
 <meta property="og:image" content="http://oczbwvoof.bkt.clouddn.com/17-5-1/67732744-file_1493647879516_9725.png">
 <meta property="og:image" content="http://oczbwvoof.bkt.clouddn.com/17-5-1/90127021-file_1493648576745_abf7.png">
-<meta property="og:updated_time" content="2017-06-29T08:18:42.647Z">
+<meta property="og:updated_time" content="2017-07-24T07:35:58.445Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="简单爬虫工具与可视化(WebScraper)">
 <meta name="twitter:description" content="来源于三节课的一个限免爬虫课，其实就是一个WebScraper的介绍课程，看了一下视频发现其实可以直接在官网看教程，不过这个课程也提供了一些应用场景和实操的例子可以参考。
@@ -146,7 +146,7 @@ PM2.5数据抓取和Echart3地图可视化
 
 
 
-  <link rel="canonical" href="http://lula-lilu.github.io/2017/05/01/简单爬虫可视化/"/>
+  <link rel="canonical" href="http://lula-lilu.github.io/2017/05/01/简单爬虫工具与可视化(WebScraper)/"/>
 
   <title> 简单爬虫工具与可视化(WebScraper) | lula </title>
 </head>
@@ -314,8 +314,8 @@ PM2.5数据抓取和Echart3地图可视化
               <span class="post-meta-item-text">In</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/爬虫/" itemprop="url" rel="index">
-                    <span itemprop="name">爬虫</span>
+                  <a href="/categories/可视化/" itemprop="url" rel="index">
+                    <span itemprop="name">可视化</span>
                   </a>
                 </span>
 
@@ -357,6 +357,28 @@ PM2.5数据抓取和Echart3地图可视化
 <li>任意一个知乎用户的所有回答内容抓取</li>
 </ol>
 <a id="more"></a>
+<!-- toc -->
+<ul>
+<li><a href="#excel的数据抓取和地图可视化功能">Excel的数据抓取和地图可视化功能</a><ul>
+<li><a href="#b站弹幕数据抓取">B站弹幕数据抓取</a></li>
+<li><a href="#空气质量数据">空气质量数据</a></li>
+<li><a href="#web-scraper">Web Scraper</a><ul>
+<li><a href="#抓取豆瓣电影top250">抓取豆瓣电影top250</a></li>
+<li><a href="#不规则分页问题点击加载更多it橘子滑动加载更多麦淘">不规则分页问题——点击加载更多（IT橘子）滑动加载更多（麦淘 ）</a></li>
+<li><a href="#链接采集二级三级页面招股书下载">链接采集二级三级页面（招股书下载）</a></li>
+<li><a href="#表单采集火车票余票查询">表单采集（火车票余票查询）</a></li>
+</ul>
+</li>
+<li><a href="#反扒高阶">反扒高阶</a><ul>
+<li><a href="#反爬虫的常见手段和应对策略">反爬虫的常见手段和应对策略</a></li>
+<li><a href="#反爬虫中的奇葩和应对策略">反爬虫中的奇葩和应对策略</a></li>
+</ul>
+</li>
+<li><a href="#结业作业爬取一个知乎用户的所有回答">结业作业——爬取一个知乎用户的所有回答</a></li>
+</ul>
+</li>
+</ul>
+<!-- tocstop -->
 <h1 id="excel的数据抓取和地图可视化功能"><a href="#Excel的数据抓取和地图可视化功能" class="headerlink" title="Excel的数据抓取和地图可视化功能"></a>Excel的数据抓取和地图可视化功能</h1><p>找到包含数据的链接，这里主要是指文本数据，以及页面当中有表格的数据</p>
 <p>涉及到的Excel功能（数据—获取外部数据—来自网站）以及（插入—演示—三维地图）</p>
 <h2 id="b站弹幕数据抓取"><a href="#B站弹幕数据抓取" class="headerlink" title="B站弹幕数据抓取"></a>B站弹幕数据抓取</h2><p>以这个视频为例，<a href="https://www.bilibili.com/video/av1134368/" target="_blank" rel="external">https://www.bilibili.com/video/av1134368/</a> ，打开之后F12开发者模式，Network标签，搜索xml（如果没有F5刷新一次），获取到网站记录弹幕的网址为<a href="https://comment.bilibili.com/1648252.xml，粘贴到Excel中（数据—获取外部数据—来自网站），导入即可，数据倒数第二列为弹幕信息，最后一列为弹幕属性信息。" target="_blank" rel="external">https://comment.bilibili.com/1648252.xml，粘贴到Excel中（数据—获取外部数据—来自网站），导入即可，数据倒数第二列为弹幕信息，最后一列为弹幕属性信息。</a></p>
@@ -451,8 +473,6 @@ PM2.5数据抓取和Echart3地图可视化
           
             <a href="/tags/爬虫/" rel="tag">#爬虫</a>
           
-            <a href="/tags/可视化/" rel="tag">#可视化</a>
-          
         </div>
       
 
@@ -460,7 +480,7 @@ PM2.5数据抓取和Echart3地图可视化
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/03/22/Python-Scripting-for-ArcGIS/" rel="next" title="面向ArcGIS的Python脚本编程笔记">
+              <a href="/2017/03/22/面向ArcGIS的Python脚本编程笔记/" rel="next" title="面向ArcGIS的Python脚本编程笔记">
                 <i class="fa fa-chevron-left"></i> 面向ArcGIS的Python脚本编程笔记
               </a>
             
@@ -468,7 +488,7 @@ PM2.5数据抓取和Echart3地图可视化
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/05/03/如何做一份优秀的 用户体验报告 - 副本/" rel="prev" title="如何做一份优秀的用户体验报告">
+              <a href="/2017/05/03/如何做一份优秀的用户体验报告/" rel="prev" title="如何做一份优秀的用户体验报告">
                 如何做一份优秀的用户体验报告 <i class="fa fa-chevron-right"></i>
               </a>
             
@@ -538,7 +558,7 @@ PM2.5数据抓取和Echart3地图可视化
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">7</span>
+              <span class="site-state-item-count">11</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
@@ -546,7 +566,7 @@ PM2.5数据抓取和Echart3地图可视化
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-count">5</span>
                 <span class="site-state-item-name">categories</span>
               </a>
             </div>
@@ -555,7 +575,7 @@ PM2.5数据抓取和Echart3地图可视化
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">9</span>
+                <span class="site-state-item-count">8</span>
                 <span class="site-state-item-name">tags</span>
               </a>
             </div>
